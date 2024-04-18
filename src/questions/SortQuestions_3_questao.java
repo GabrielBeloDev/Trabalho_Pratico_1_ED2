@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class SortQuestions_3_questao {
 
+    // método principal
     public static void main(String[] args) {
         int[] tamanhos = {100, 1000, 10000, 100000, 1000000};
         for (int tamanho : tamanhos) {
@@ -13,7 +14,7 @@ public class SortQuestions_3_questao {
             System.out.println("Para N = " + tamanho + ", L ótimo encontrado: " + L_otimo);
         }
 
-        Integer[] vetorPequeno = {5, 3, 2, 1, 4, 7, 6, 9, 8};
+        Integer[] vetorPequeno = {7, 1,9,6,2,9,0,2,3,1,2, 1, 4, 7, 6, 9, 8};
         int L = 3; // no caso eu usei o l sendo 3 para exemplo, melhor seria usar o L ótimo encontrado acima
 
         System.out.println("Vetor antes da ordenação:");
@@ -29,6 +30,7 @@ public class SortQuestions_3_questao {
         }
     }
 
+    // gera um vetor com elementos aleatórios.
     private static Integer[] geraArrayAleatorio(int tamanho) {
         Integer[] vetor = new Integer[tamanho];
         Random random = new Random();
@@ -38,6 +40,7 @@ public class SortQuestions_3_questao {
         return vetor;
     }
 
+    // encontra o valor ótimo de L que define o ponto de corte entre QuickSort e BubbleSort.
     private static int encontraLOtimo(Integer[] vetorOriginal) {
         int L_otimo = 0;
         long tempoOtimo = Long.MAX_VALUE;
