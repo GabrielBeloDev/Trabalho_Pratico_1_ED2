@@ -40,5 +40,27 @@ public class SortQuestions_4_questao {
         System.out.println("Array ordenado com threads:");
         System.out.println(Arrays.toString(arrayComThreads));
         System.out.println("Duração com threads: " + (tempoFinal - tempoInicial) + " milissegundos.");
+
+//        int[] tamanhos = {1, 10, 100, 1000, 10000, 100000, 1000000};
+//        for (int tamanho : tamanhos) {
+//            Integer[] arrayTeste = new Integer[tamanho];
+//            for (int i = 0; i < tamanho; i++) {
+//                arrayTeste[i] = aleatorio.nextInt(100);
+//            }
+//
+//            Integer[] arrayTesteSemThreads = Arrays.copyOf(arrayTeste, tamanho);
+//            Integer[] arrayTesteComThreads = Arrays.copyOf(arrayTeste, tamanho);
+//
+//            tempoInicial = System.currentTimeMillis();
+//            sorter.doubleHeapSort(arrayTesteSemThreads, false);
+//            tempoFinal = System.currentTimeMillis();
+//            System.out.println("Teste sem threads para tamanho " + tamanho + ": " + (tempoFinal - tempoInicial) + " ms");
+//
+//            tempoInicial = System.currentTimeMillis();
+//            sorter.doubleHeapSort(arrayTesteComThreads, true);
+//            tempoFinal = System.currentTimeMillis();
+//            System.out.println("Teste com threads para tamanho " + tamanho + ": " + (tempoFinal - tempoInicial) + " ms");
+//        }
+//    }
     }
 }
