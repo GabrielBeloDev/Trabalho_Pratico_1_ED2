@@ -11,7 +11,7 @@ public class SortQuestions_4_questao {
         Random aleatorio = new Random();
 
         for (int i = 0; i < tamanhoDoArray; i++) {
-            arrayOriginal[i] = aleatorio.nextInt(100);  // Números aleatórios de 0 a 99
+            arrayOriginal[i] = aleatorio.nextInt(100);
         }
 
         Integer[] arraySemThreads = Arrays.copyOf(arrayOriginal, tamanhoDoArray);
@@ -61,6 +61,5 @@ public class SortQuestions_4_questao {
 //            tempoFinal = System.currentTimeMillis();
 //            System.out.println("Teste com threads para tamanho " + tamanho + ": " + (tempoFinal - tempoInicial) + " ms");
 //        }
-//    }
     }
 }

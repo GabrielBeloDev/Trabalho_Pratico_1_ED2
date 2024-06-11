@@ -3,31 +3,7 @@ package sort;
 import java.util.Arrays;
 
 public class DoubleHeapSort<T extends Comparable<T>> {
-    private void buildMaxHeap(T[] heap, int size) {
-        for (int i = size / 2 - 1; i >= 0; i--) {
-            maxHeapify(heap, i, size);
-        }
-    }
 
-    private void buildMinHeap(T[] heap, int size) {
-        for (int i = size / 2 - 1; i >= 0; i--) {
-            minHeapify(heap, i, size);
-        }
-    }
-
-    private T extractMax(T[] heap, int size) {
-        T max = heap[0];
-        heap[0] = heap[size - 1];
-        maxHeapify(heap, 0, size - 1);
-        return max;
-    }
-
-    private T extractMin(T[] heap, int size) {
-        T min = heap[0];
-        heap[0] = heap[size - 1];
-        minHeapify(heap, 0, size - 1);
-        return min;
-    }
 
     private void maxHeapify(T[] heap, int i, int size) {
         int left = 2 * i + 1;
@@ -66,6 +42,34 @@ public class DoubleHeapSort<T extends Comparable<T>> {
             minHeapify(heap, smallest, size);
         }
     }
+
+
+    private void buildMaxHeap(T[] heap, int size) {
+        for (int i = size / 2 - 1; i >= 0; i--) {
+            maxHeapify(heap, i, size);
+        }
+    }
+
+    private void buildMinHeap(T[] heap, int size) {
+        for (int i = size / 2 - 1; i >= 0; i--) {
+            minHeapify(heap, i, size);
+        }
+    }
+
+    private T extractMax(T[] heap, int size) {
+        T max = heap[0];
+        heap[0] = heap[size - 1];
+        maxHeapify(heap, 0, size - 1);
+        return max;
+    }
+
+    private T extractMin(T[] heap, int size) {
+        T min = heap[0];
+        heap[0] = heap[size - 1];
+        minHeapify(heap, 0, size - 1);
+        return min;
+    }
+
     public void doubleHeapSort(T[] array, boolean useThreads) {
         int n = array.length;
         T[] maxHeap = Arrays.copyOf(array, n);
